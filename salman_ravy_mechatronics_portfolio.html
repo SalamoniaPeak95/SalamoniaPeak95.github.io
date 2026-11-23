@@ -1,0 +1,222 @@
+<!-- ... existing code ... -->
+    <!-- Google Fonts: IBM Plex Sans (400, 500, 600, 700) & IBM Plex Mono (400, 500, 600) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Design Token Configuration (Swiss-Industrial Drafting Palette) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#F4F3EE',
+                        surface: '#ECEAE2',
+                        ink: '#111111',
+                        graphite: '#57554E',
+                        hairline: '#D8D5CC',
+                        signal: '#C84B31',
+                    },
+                    fontFamily: {
+                        sans: ['"IBM Plex Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+                        mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Warm drafting-paper ground and crisp antialiasing */
+        html {
+            background-color: #F4F3EE;
+            color: #111111;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+<!-- ... existing code ... -->
+        .reg-tick {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            pointer-events: none;
+        }
+        .reg-tl { top: 6px; left: 6px; border-top: 1px solid #111111; border-left: 1px solid #111111; }
+        .reg-tr { top: 6px; right: 6px; border-top: 1px solid #111111; border-right: 1px solid #111111; }
+        .reg-bl { bottom: 6px; left: 6px; border-bottom: 1px solid #111111; border-left: 1px solid #111111; }
+        .reg-br { bottom: 6px; right: 6px; border-bottom: 1px solid #111111; border-right: 1px solid #111111; }
+<!-- ... existing code ... -->
+        .spec-scroll::-webkit-scrollbar-thumb {
+            background: #D8D5CC;
+        }
+        .spec-scroll::-webkit-scrollbar-thumb:hover {
+            background: #57554E;
+        }
+    </style>
+</head>
+<body class="bg-paper text-ink font-sans overflow-x-hidden">
+
+    <!-- =====================================================================
+         STICKY TOP UTILITY BAR (Wordmark + Live Clock + Nav + EN/TR Switcher)
+    ====================================================================== -->
+    <header class="sticky top-0 z-40 bg-paper border-b hairline-border">
+        <div class="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+            <div class="flex items-center justify-between py-3 gap-3">
+
+                <!-- Left: Identity Wordmark & Live Istanbul 24-Hour Clock -->
+                <div class="flex items-center gap-3 sm:gap-5 min-w-0">
+                    <a href="#top" class="font-mono text-xs tracking-wider uppercase font-semibold text-ink hover:text-signal transition-colors duration-150 shrink-0">
+                        SALMAN RAVY // MTE
+                    </a>
+                    <span class="hidden sm:inline text-hairline" aria-hidden="true">|</span>
+                    <div class="flex items-center gap-2 font-mono text-[11px] tracking-wider uppercase text-graphite tabular-nums shrink-0">
+<!-- ... existing code ... -->
+                        <!-- External Links Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 divide-y sm:divide-y-0 sm:divide-x hairline-divide font-mono text-[11px] uppercase tracking-wider bg-surface/50">
+                            <a href="#"
+                                class="p-3.5 flex items-center justify-between text-ink hover:bg-surface hover:text-signal transition-colors duration-150">
+                                <span>GITHUB</span>
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                            <a href="#"
+                                class="p-3.5 flex items-center justify-between text-ink hover:bg-surface hover:text-signal transition-colors duration-150">
+                                <span>LINKEDIN</span>
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=8jFKJZIkRjM&t=12s" target="_blank" rel="noopener noreferrer"
+                                class="p-3.5 flex items-center justify-between text-ink hover:bg-surface hover:text-signal transition-colors duration-150">
+                                <span data-i18n="linkTeknofest">TEKNOFEST</span>
+                                <span aria-hidden="true">↗</span>
+                            </a>
+<!-- ... existing code ... -->
+                'PRJ-03': [
+                    { src: '', hint: 'images/capstone-vtol-01.jpg', caption: { en: 'FIG 01 — LIFT-PLUS-CRUISE VTOL AIRFRAME ARCHITECTURE', tr: 'ŞEKİL 01 — LIFT-PLUS-CRUISE VTOL GÖVDE MİMARİSİ' } },
+                    { src: '', hint: 'images/capstone-vtol-02.jpg', caption: { en: 'FIG 02 — PROPULSION LAYOUT & PAYLOAD BAY CAD', tr: 'ŞEKİL 02 — İTKİ YERLEŞİMİ VE FAYDALI YÜK BÖLMESİ CAD' } },
+                    { src: '', hint: 'images/capstone-vtol-03.jpg', caption: { en: 'FIG 03 — STRUCTURAL MATERIAL & TRANSITION ANALYSIS', tr: 'ŞEKİL 03 — YAPISAL MALZEME VE GEÇİŞ DİNAMİĞİ ANALİZİ' } }
+                ],
+<!-- ... existing code ... -->
+                    heroKicker: 'MECHATRONICS ENGINEERING // KADIR HAS UNIVERSITY, ISTANBUL',
+                    heroSubtitle: 'Mechatronics Engineering — Istanbul, Türkiye',
+                    heroBio: 'Mechatronics Engineering student at Kadir Has University focused on hands-on mechanical design, UAV airframes, autonomous mobile robotics, composites, and system simulation — from SolidWorks CAD and fabrication to MATLAB/Simulink validation. TEKNOFEST 2025 Savaşan İHA Finalist with Team UFK.',
+                    ctaLedger: 'INSPECT PROJECTS ↓',
+                    ctaContact: 'CONTACT',
+                    heroFootLeft: 'TEKNOFEST 2025 FINALIST · TEAM UFK',
+                    heroFootRight: 'MECHANICAL CAD · ROBOTICS · SIMULATION',
+
+                    plateHeader: 'SPEC SHEET',
+                    plateInstLabel: 'INSTITUTION',
+                    plateInstVal: 'Kadir Has University (2023–2027)',
+                    plateLocLabel: 'LOCATION',
+                    plateLocVal: 'Istanbul, Türkiye',
+                    plateBuildsLabel: 'ACTIVE BUILDS',
+                    plateBuildsVal: '3 Active Fall 2026 Builds (Senior VTOL, MTE 403, FENS 203)',
+                    plateLangLabel: 'LANGUAGES',
+                    plateLicLabel: 'CERTIFICATIONS',
+                    plateLicVal: 'KEGM Class B Radio · First Aid · PADI Open Water',
+<!-- ... existing code ... -->
+                    heroKicker: 'MEKATRONİK MÜHENDİSLİĞİ // KADİR HAS ÜNİVERSİTESİ, İSTANBUL',
+                    heroSubtitle: 'Mekatronik Mühendisliği — İstanbul, Türkiye',
+                    heroBio: 'Kadir Has Üniversitesi Mekatronik Mühendisliği öğrencisi. SolidWorks CAD tasarımından üretime ve MATLAB/Simulink doğrulamasına kadar İHA gövdeleri, otonom mobil robotik, kompozit malzemeler ve sistem simülasyonu üzerine çalışmaktadır. UFK Takımı ile TEKNOFEST 2025 Savaşan İHA Finalisti.',
+                    ctaLedger: 'PROJELERİ İNCELE ↓',
+                    ctaContact: 'İLETİŞİM',
+                    heroFootLeft: 'TEKNOFEST 2025 FİNALİSTİ · UFK TAKIMI',
+                    heroFootRight: 'MEKANİK CAD · ROBOTİK · SİMÜLASYON',
+
+                    plateHeader: 'TEKNİK KÜNYE',
+                    plateInstLabel: 'ÜNİVERSİTE',
+                    plateInstVal: 'Kadir Has Üniversitesi (2023–2027)',
+                    plateLocLabel: 'KONUM',
+                    plateLocVal: 'İstanbul, Türkiye',
+                    plateBuildsLabel: 'AKTİF PROJELER',
+                    plateBuildsVal: '3 Aktif Güz 2026 Projesi (Bitirme VTOL, MTE 403, FENS 203)',
+                    plateLangLabel: 'DİLLER',
+                    plateLicLabel: 'SERTİFİKALAR',
+                    plateLicVal: 'KEGM B Sınıfı Telsiz · İlk Yardım · PADI Open Water',
+<!-- ... existing code ... -->
+            const CATEGORIES = [
+                { key: 'ALL', label: { en: 'ALL', tr: 'TÜMÜ' } },
+                { key: 'UAV / AERO', label: { en: 'UAV / AERO', tr: 'İHA / HAVACILIK' } },
+                { key: 'ROBOTICS & SIM', label: { en: 'ROBOTICS & SIM', tr: 'ROBOTİK VE SİMÜLASYON' } },
+                { key: 'MATERIALS / MFG', label: { en: 'MATERIALS / MFG', tr: 'MALZEME VE ÜRETİM' } },
+                { key: 'RF / RADIO', label: { en: 'RF / RADIO', tr: 'RF VE TELSİZ' } }
+            ];
+<!-- ... existing code ... -->
+                        { label: { en: 'CURE & ANALYSIS', tr: 'KÜRLEME VE ANALİZ' }, value: { en: '24h+ Press Cure · Density & Voids', tr: '24+ Saat Basınçlı Kürleme · Yoğunluk ve Boşluk' } }
+                    ],
+<!-- ... existing code ... -->
+                {
+                    id: 'PRJ-08',
+                    category: 'RF / RADIO',
+                    year: '2026',
+                    badge: { en: 'COMPLETED', tr: 'TAMAMLANDI' },
+                    title: {
+                        en: 'Amateur Radio & 70cm UHF Antenna / DMR Rig',
+                        tr: 'Amatör Telsiz, 70 cm UHF Anten ve DMR İstasyonu'
+                    },
+                    role: {
+                        en: 'Licensed Amateur Radio Operator (KEGM Class B)',
+                        tr: 'Lisanslı Amatör Telsiz Operatörü (KEGM B Sınıfı)'
+                    },
+                    summary: {
+                        en: 'Built and tuned homemade 70cm UHF PVC flower pot and Yagi antennas paired with a TYT MD-390 DMR transceiver and a Raspberry Pi MMDVM Pi-Star hotspot under a Turkish Class B Amateur Radio license (KEGM), deployed for JOTA-JOTI youth scouting communications.',
+                        tr: 'KEGM B Sınıfı Amatör Telsizcilik belgesi kapsamında 70 cm UHF bandında çalışan el yapımı PVC flower pot ve Yagi antenler tasarlayıp ayarladı; TYT MD-390 DMR el telsizi ve Raspberry Pi MMDVM Pi-Star hotspot ile eşleştirerek JOTA-JOTI izcilik haberleşmesinde aktif olarak kullandı.'
+                    },
+                    metrics: [
+                        { label: { en: 'BAND / ANTENNAS', tr: 'BANT / ANTENLER' }, value: { en: '70cm UHF Flower Pot & Yagi', tr: '70 cm UHF Flower Pot ve Yagi' } },
+                        { label: { en: 'HOTSPOT', tr: 'HOTSPOT' }, value: { en: 'Raspberry Pi MMDVM Pi-Star', tr: 'Raspberry Pi MMDVM Pi-Star' } },
+                        { label: { en: 'TRANSCEIVER', tr: 'TELSİZ' }, value: { en: 'TYT MD-390 (DMR)', tr: 'TYT MD-390 (DMR)' } },
+                        { label: { en: 'DEPLOYMENT', tr: 'KULLANIM ALANI' }, value: { en: 'JOTA-JOTI Scouting Comms', tr: 'JOTA-JOTI İzcilik Haberleşmesi' } }
+                    ],
+                    deliverables: {
+                        en: [
+                            'Fabricated and tuned homemade 70cm UHF PVC flower pot and directional Yagi antennas for reliable repeater access.',
+                            'Configured a Raspberry Pi MMDVM Pi-Star digital voice hotspot and programmed TYT MD-390 DMR codeplugs.',
+                            'Operated live JOTA-JOTI amateur radio sessions introducing youth scouts to RF communications.'
+                        ],
+                        tr: [
+                            'Güvenilir röle erişimi için 70 cm UHF el yapımı PVC flower pot ve yönlü Yagi antenler üretti ve ayarladı.',
+                            'Raspberry Pi MMDVM Pi-Star sayısal ses hotspot\'unu yapılandırdı ve TYT MD-390 DMR kanal planlarını (codeplug) programladı.',
+                            'Genç izcileri RF haberleşmesiyle tanıştırmak amacıyla canlı JOTA-JOTI amatör telsiz oturumları yönetti.'
+                        ]
+                    },
+                    tools: {
+                        en: ['70cm UHF Antennas (Flower Pot & Yagi)', 'MMDVM Pi-Star', 'Raspberry Pi', 'TYT MD-390 DMR', 'KEGM Class B RF'],
+                        tr: ['70 cm UHF Antenler (Flower Pot ve Yagi)', 'MMDVM Pi-Star', 'Raspberry Pi', 'TYT MD-390 DMR', 'KEGM B Sınıfı RF']
+                    },
+                    externalLink: null
+                }
+            ];
+<!-- ... existing code ... -->
+            function applyLanguage(lang) {
+                currentLang = lang === 'tr' ? 'tr' : 'en';
+                const t = UI[currentLang];
+
+                // Persist preference safely in localStorage
+                try {
+                    localStorage.setItem('salman_portfolio_lang', currentLang);
+                } catch (err) {
+                    // Ignore storage restrictions in sandboxed environments
+                }
+
+                // Update document metadata
+                document.documentElement.lang = currentLang;
+                document.title = t.pageTitle;
+<!-- ... existing code ... -->
+            // Restore saved language preference or default to English
+            let initialLang = 'en';
+            try {
+                const savedLang = localStorage.getItem('salman_portfolio_lang');
+                if (savedLang === 'tr' || savedLang === 'en') {
+                    initialLang = savedLang;
+                }
+            } catch (err) {
+                initialLang = 'en';
+            }
+            applyLanguage(initialLang);
+        })();
+    </script>
+</body>
+</html>
